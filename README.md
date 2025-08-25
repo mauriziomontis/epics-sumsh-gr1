@@ -9,6 +9,17 @@
 ## Participants
 
 
+## Netwoek
+
+LAN network: 172.30.84.0/24
+
+Device:
+- raspberry-pi: 172.30.84.235
+- power supply: 172.30.84.111
+- motor driver: 172.30.84.151
+
+
+
 
 ## Project Description
 
