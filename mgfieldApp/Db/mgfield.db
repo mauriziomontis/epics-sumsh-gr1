@@ -1,0 +1,130 @@
+#record(ai,"$(user):")
+#{
+#    field(DESC,"")
+#    field(EGU,"")
+#    field(VAL,"")
+#    field(HIGH,"")
+#    field(HSV,"")
+#    field(HIHI,"")
+#    field(HHSV,"")
+#    field(FLNK,"$(project):fanout-input") # Example of FLNK
+#}
+############################################################
+####	Power supply RECORD
+############################################################
+record(ai,"$(user):pwrspl:ps-avg")
+{
+    field(DESC,"Average")
+    field(EGU,"A")
+    field(VAL,"0")
+    field(HIGH,"10")
+    field(HSV,"MINOR")
+    field(HIHI,"15")
+    field(HHSV,"MAJOR")
+    field(FLNK,"$(project):fanout-input")
+}
+
+record(ai,"$(user):pwrspl:ps-unb")
+{
+    field(DESC,"Unbalance")
+    field(EGU,"A")
+    field(VAL,"0")
+    field(HIGH,"10")
+    field(HSV,"MINOR")
+    field(HIHI,"15")
+    field(HHSV,"MAJOR")
+    field(FLNK,"$(project):fanout-input")
+}
+
+record(fanout,"$(user):pwrspl:fanout-input")
+{
+    field(LNK0,"$(project):calc-ps1")
+    field(LNK1,"$(project):calc-ps2")
+}
+
+record(stringo,"$(user):pwespl:disable")
+{
+    field (DESC, "Disable output")
+    field(ZNAM,"Output OFF")
+    field(ONAM,"Output ON")
+    field(FLNK,"$(project):fanout-disable")
+}
+
+record(dfanout,"$(user):pwrspl:dfanout-disable")
+{
+    field(OUTA,"$(project):calc-ps1.DISA")
+    field(OUTB,"$(project):calc-ps2.DISA")
+    field(OMSL,"closed_loop")
+    field(DOL,"$(project):disable")
+}
+
+record(fanout,"$(user):pwrspl:fanout-disable")
+{
+    field(LNK0,"$(project):dfanout-disable")
+    field(LNK1,"$(project):ps-avg")
+    field(LNK2,"$(project):ps-unb")
+}
+
+record(calc,"$(user):pwrspl:calc-ps1")
+{
+    field(DESC,"Calculate PS1 SP")
+    field(INPA,"$(project):ps-avg")
+    field(INPB,"$(project):ps-unb")
+    field(CALC,"A*(B+1)")
+    field(FLNK,"$(project):ps1-sp")
+}
+
+record(calc,"$(user):pwrspl:calc-ps2")
+{
+    field(DESC,"Calculate PS2 SP")
+    field(INPA,"$(project):ps-avg")
+    field(INPB,"$(project):ps-unb")
+    field(CALC,"A*(1-B)")
+    field(FLNK,"$(project):ps2-sp")
+}
+
+record(ao,"$(user):pwrspl:ps1-sp")
+{
+    field(DESC,"Setpoint of PS1")
+    field(EGU,"A")
+    field(DRVL,"0")
+    field(DRVH,"10")
+    field(OMSL,"closed_loop")
+    field(DOL,"$(project):calc-ps1")
+}
+
+record(ao,"$(user):pwrspl:ps2-sp")
+{
+    field(DESC,"Setpoint of PS2")
+    field(EGU,"A")
+    field(DRVL,"0")
+    field(DRVH,"10")
+    field(OMSL,"closed_loop")
+    field(DOL,"$(project):calc-ps2")
+}
+##################################################
+#####	Motor driver
+##################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#################################################
+#####	Gaussmeter with RaspBerry Pi
+#################################################
+
+
+
+
