@@ -17,7 +17,8 @@ raspignet_registerRecordDeviceDriver pdbbase
 ## Load record instances
 dbLoadRecords "../../db/gsmtr.db","user=iocadm"
 
-drvAsynIPPortConfigure("RASPY1", "172.30.84.235:10000", 0, 0, 0)
+#drvAsynIPPortConfigure("RASPY1", "172.30.84.235:10000", 0, 0, 0)
+drvAsynIPPortConfigure("RASPY1", "192.168.1.69:10000", 0, 0, 0)
 
 iocInit()
 

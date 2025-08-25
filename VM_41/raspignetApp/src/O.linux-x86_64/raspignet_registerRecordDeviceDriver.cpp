@@ -395,7 +395,7 @@ static struct iocshVarDef vardefs[] = {
 int raspignet_registerRecordDeviceDriver(DBBASE *pbase)
 {
     static int executed = 0;
-    const char *bldTop = "/home/iocadm/workspace";
+    const char *bldTop = "/home/iocadm/workspace/VM_41";
     const char *envTop = getenv("TOP");
 
     if (envTop && strcmp(envTop, bldTop)) {

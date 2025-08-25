@@ -1,5 +1,5 @@
 epicsEnvSet("IOC","iocraspignet")
-epicsEnvSet("TOP","/home/iocadm/workspace")
+epicsEnvSet("TOP","/home/iocadm/workspace/VM_41")
 epicsEnvSet("EPICS_BASE","/opt/epics/base-7.0.9")
 epicsEnvSet("STREAM","/opt/epics/stream-2.8.24/")
 epicsEnvSet("ASYN","/opt/epics/asyn-4.44.2/")
