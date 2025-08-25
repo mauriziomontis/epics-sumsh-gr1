@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Display</name>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>TITLE</class>
+    <text>Magnetic Field</text>
+    <x use_class="true">0</x>
+    <y use_class="true">0</y>
+    <width>550</width>
+    <height>31</height>
+    <font use_class="true">
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="scaledslider" version="2.0.0">
+    <name>Scaled Slider</name>
+    <x>240</x>
+    <y>140</y>
+    <width>130</width>
+    <height>400</height>
+    <horizontal>false</horizontal>
+    <level_hihi>10.0</level_hihi>
+    <level_high>9.0</level_high>
+    <level_low>-9.0</level_low>
+    <level_lolo>-10.0</level_lolo>
+    <increment>0.5</increment>
+    <minimum>-10.0</minimum>
+    <maximum>10.0</maximum>
+    <limits_from_pv>false</limits_from_pv>
+  </widget>
+  <widget type="spinner" version="2.0.0">
+    <name>Spinner</name>
+    <x>60</x>
+    <y>140</y>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle</name>
+    <x>380</x>
+    <y>140</y>
+    <width>20</width>
+    <height>400</height>
+  </widget>
+  <widget type="table" version="2.0.0">
+    <name>Table</name>
+    <x>410</x>
+    <y>140</y>
+    <width>450</width>
+    <height>400</height>
+    <columns>
+      <column>
+        <name>Current (A)</name>
+        <width>100</width>
+        <editable>true</editable>
+      </column>
+      <column>
+        <name>Distance (cm)</name>
+        <width>150</width>
+        <editable>true</editable>
+      </column>
+      <column>
+        <name>Output Magnetic Field (T)</name>
+        <width>200</width>
+        <editable>true</editable>
+      </column>
+    </columns>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <text>ON/OFF</text>
+    <x>60</x>
+    <y>210</y>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Current (A)</text>
+    <x>70</x>
+    <y>100</y>
+    <width>70</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Interruptor for Magnetic Field</text>
+    <x>20</x>
+    <y>180</y>
+    <width>210</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>Distance (cm)</text>
+    <x>240</x>
+    <y>100</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>Results</text>
+    <x>610</x>
+    <y>100</y>
+  </widget>
+</display>
