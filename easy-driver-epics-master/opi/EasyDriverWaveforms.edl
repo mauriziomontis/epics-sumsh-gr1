@@ -1,0 +1,205 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 863
+y 125
+w 280
+h 150
+font "helvetica-medium-r-18.0"
+ctlFont "helvetica-medium-r-12.0"
+btnFont "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+textColor index 0
+ctlFgColor1 index 1
+ctlFgColor2 index 7
+ctlBgColor1 index 19
+ctlBgColor2 index 21
+topShadowColor index 2
+botShadowColor index 0
+endScreenProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 1
+y 1
+w 279
+h 30
+font "helvetica-medium-r-24.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "$(P)$(R)"
+}
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 62
+w 80
+h 24
+fgColor index 14
+onColor index 31
+offColor index 31
+topShadowColor index 2
+botShadowColor index 0
+controlPv "$(P)$(R)WaveformStop"
+pressValue "0"
+onLabel "Stop"
+offLabel "Stop"
+3d
+useEnumNumeric
+font "helvetica-bold-r-18.0"
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 36
+w 80
+h 24
+fgColor index 14
+onColor index 31
+offColor index 31
+topShadowColor index 2
+botShadowColor index 0
+controlPv "$(P)$(R)WaveformStart.PROC"
+pressValue "0"
+onLabel "Start"
+offLabel "Start"
+3d
+useEnumNumeric
+font "helvetica-bold-r-18.0"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 117
+y 39
+w 135
+h 17
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 143
+y 39
+w 109
+h 17
+font "helvetica-medium-r-14.0"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "Waveform Active"
+}
+autoSize
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 117
+y 39
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 118
+y 40
+w 14
+h 14
+lineColor index 25
+fill
+fillColor index 25
+lineWidth 0
+visPv "$(P)$(R)WaveformActive"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 134
+y 102
+w 100
+h 22
+controlPv "$(P)$(R)WaveformCount"
+font "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 2
+editable
+autoHeight
+limitsFromDb
+nullColor index 7
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 5
+y 102
+w 120
+h 22
+font "helvetica-medium-r-18.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "Cycle Count"
+}
+endObjectProperties
+

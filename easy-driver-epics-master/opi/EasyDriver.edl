@@ -1,0 +1,2732 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 587
+y 82
+w 450
+h 700
+font "helvetica-medium-r-18.0"
+ctlFont "helvetica-medium-r-12.0"
+btnFont "helvetica-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+textColor index 0
+ctlFgColor1 index 1
+ctlFgColor2 index 7
+ctlBgColor1 index 19
+ctlBgColor2 index 21
+topShadowColor index 2
+botShadowColor index 0
+endScreenProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 4
+y 305
+w 441
+h 120
+lineColor index 14
+fillColor index 19
+endObjectProperties
+
+# (Slider)
+object activeSliderClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 1
+y 73
+w 442
+h 100
+fgColor index 14
+bgColor index 3
+bgAlarm 1
+2ndBgColor index 31
+controlColor index 14
+controlAlarm 1
+indicatorColor index 7
+indicatorAlarm 1
+font "helvetica-medium-r-12.0"
+controlPv "$(P)$(R)Setpoint"
+indicatorPv "$(P)$(R)CurrentRBV"
+controlLabel "Setpoint (A)"
+readLabel "Current (A)"
+increment 1
+incMultiplier 1
+limitsFromDb
+displayFormat "FFloat"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 342
+y 332
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 342
+y 332
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "Local"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 502
+y 332
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 503
+y 333
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)Local"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 330
+y 186
+w 103
+h 54
+
+beginGroup
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 417
+y 204
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 418
+y 205
+w 14
+h 14
+lineColor index 16
+fill
+fillColor index 16
+lineWidth 0
+visPv "$(P)$(R)SlewControlRBV"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 330
+y 203
+w 80
+h 18
+fgColor index 14
+onColor index 31
+offColor index 31
+topShadowColor index 2
+botShadowColor index 0
+controlPv "$(P)$(R)SlewControl"
+pressValue "1"
+onLabel "Rate Limit"
+offLabel "Rate Limit"
+3d
+useEnumNumeric
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 330
+y 222
+w 80
+h 18
+fgColor index 14
+onColor index 31
+offColor index 31
+topShadowColor index 2
+botShadowColor index 0
+controlPv "$(P)$(R)SlewControl"
+pressValue "0"
+onLabel "Unlimited"
+offLabel "Unlimited"
+3d
+useEnumNumeric
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 330
+y 186
+w 99
+h 15
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "Slew Rate Control"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 11
+y 182
+w 107
+h 69
+
+beginGroup
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 98
+y 204
+w 20
+h 20
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 99
+y 205
+w 18
+h 18
+lineColor index 16
+fill
+fillColor index 16
+lineWidth 0
+visPv "$(P)$(R)BulkStatus"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 11
+y 203
+w 80
+h 24
+fgColor index 14
+onColor index 31
+offColor index 31
+topShadowColor index 2
+botShadowColor index 0
+controlPv "$(P)$(R)BulkEnable"
+pressValue "1"
+onLabel "ON"
+offLabel "ON"
+3d
+useEnumNumeric
+font "helvetica-bold-r-18.0"
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 11
+y 227
+w 80
+h 24
+fgColor index 14
+onColor index 31
+offColor index 31
+topShadowColor index 2
+botShadowColor index 0
+controlPv "$(P)$(R)BulkEnable"
+pressValue "0"
+onLabel "OFF"
+offLabel "OFF"
+3d
+useEnumNumeric
+font "helvetica-bold-r-18.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 11
+y 182
+w 80
+h 21
+font "helvetica-medium-r-18.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "BULK"
+}
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 175
+y 182
+w 107
+h 69
+
+beginGroup
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 262
+y 204
+w 20
+h 20
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 263
+y 205
+w 18
+h 18
+lineColor index 16
+fill
+fillColor index 16
+lineWidth 0
+visPv "$(P)$(R)SupplyOn"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 175
+y 203
+w 80
+h 24
+fgColor index 14
+onColor index 31
+offColor index 31
+topShadowColor index 2
+botShadowColor index 0
+controlPv "$(P)$(R)Enable"
+pressValue "1"
+onLabel "ON"
+offLabel "ON"
+3d
+useEnumNumeric
+font "helvetica-bold-r-18.0"
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 175
+y 227
+w 80
+h 24
+fgColor index 14
+onColor index 31
+offColor index 31
+topShadowColor index 2
+botShadowColor index 0
+controlPv "$(P)$(R)Enable"
+pressValue "0"
+onLabel "OFF"
+offLabel "OFF"
+3d
+useEnumNumeric
+font "helvetica-bold-r-18.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 175
+y 182
+w 80
+h 21
+font "helvetica-medium-r-18.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "SUPPLY"
+}
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 4
+y 436
+w 441
+h 252
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 4
+y 445
+w 441
+h 243
+lineColor index 14
+fillColor index 19
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 8
+y 499
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 8
+y 499
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "DSP Error"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 168
+y 499
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 169
+y 500
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)DSPerror"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 8
+y 519
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 8
+y 519
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "Overcurrent"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 168
+y 519
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 169
+y 520
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)OverCurrent"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 8
+y 559
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 8
+y 559
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "FET Overtemperature"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 168
+y 559
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 169
+y 560
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)FETovertemp"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 8
+y 459
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 8
+y 459
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "Generic Fault"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 168
+y 459
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 169
+y 460
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)GenericFault"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 8
+y 479
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 8
+y 479
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "Generic Warning"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 168
+y 479
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 169
+y 480
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)GenericWarning"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 8
+y 539
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 8
+y 539
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "Crowbar"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 168
+y 539
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 169
+y 540
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)Crowbar"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 358
+y 656
+w 60
+h 22
+fgColor index 14
+onColor index 31
+offColor index 31
+topShadowColor index 2
+botShadowColor index 0
+controlPv "$(P)$(R)Reset"
+pressValue "0"
+onLabel "Reset"
+offLabel "Reset"
+3d
+useEnumNumeric
+font "helvetica-bold-r-14.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 202
+y 436
+w 45
+h 17
+font "helvetica-medium-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+value {
+  "Faults"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 8
+y 619
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 8
+y 619
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "Ground Current"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 168
+y 619
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 169
+y 620
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)GroundCurrent"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 8
+y 639
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 8
+y 639
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "Regulator"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 168
+y 639
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 169
+y 640
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)RegulatorFault"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 244
+y 459
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 244
+y 459
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "External Interlock 1"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 404
+y 459
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 405
+y 460
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)ExternalInterlock1"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 8
+y 579
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 8
+y 579
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "Shunt Overtemperature"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 168
+y 579
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 169
+y 580
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)ShuntOvertemp"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 8
+y 599
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 8
+y 599
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "DC Undervoltage	"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 168
+y 599
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 169
+y 600
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)DCunderV"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 8
+y 659
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 8
+y 659
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "Ripple"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 168
+y 659
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 169
+y 660
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)RippleFault"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 244
+y 499
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 244
+y 499
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "External Interlock 3"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 404
+y 499
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 405
+y 500
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)ExternalInterlock3"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 244
+y 519
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 244
+y 519
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "External Interlock 4"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 404
+y 519
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 405
+y 520
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)ExternalInterlock4"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 244
+y 559
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 244
+y 559
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "External Interlock 6"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 404
+y 559
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 405
+y 560
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)ExternalInterlock6"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 244
+y 479
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 244
+y 479
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "External Interlock 2"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 404
+y 479
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 405
+y 480
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)ExternalInterlock2"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 244
+y 579
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 244
+y 579
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "External Interlock 7"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 404
+y 579
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 405
+y 580
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)ExternalInterlock7"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 244
+y 599
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 244
+y 599
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "External Interlock 8"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 404
+y 599
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 405
+y 600
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)ExternalInterlock8"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 244
+y 539
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 244
+y 539
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "External Interlock 5"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 404
+y 539
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 405
+y 540
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)ExternalInterlock5"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 244
+y 619
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 244
+y 619
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "Ground Fault"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 404
+y 619
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 405
+y 620
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)GroundFault"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 1
+y 1
+w 447
+h 27
+font "helvetica-medium-r-24.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "$(P)$(R)"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 1
+y 33
+w 447
+h 22
+controlPv "$(P)$(R)Version"
+font "helvetica-medium-r-18.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 7
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 330
+y 265
+w 90
+h 22
+fgColor index 14
+bgColor index 31
+topShadowColor index 2
+botShadowColor index 0
+font "helvetica-bold-r-14.0"
+noEdit
+buttonLabel "More..."
+numPvs 4
+numDsps 3
+displayFileName {
+  0 "EasyDriverGains.edl"
+  1 "EasyDriverWaveforms.edl"
+  2 "Message.edl"
+}
+menuLabel {
+  0 "Gains"
+  1 "Waveforms"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 2
+y 267
+w 230
+h 20
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 2
+y 269
+w 125
+h 17
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "Readback Interval"
+}
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 132
+y 267
+w 100
+h 20
+fgColor index 14
+bgColor index 31
+inconsistentColor index 21
+topShadowColor index 2
+botShadowColor index 0
+controlPv "$(P)$(R)ReadbackPoll_.SCAN"
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 8
+y 319
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 8
+y 319
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "Local"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 168
+y 319
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 169
+y 320
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)Local"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 8
+y 339
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 8
+y 339
+w 155
+h 17
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "Ramping"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 168
+y 339
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 169
+y 340
+w 14
+h 14
+lineColor index 25
+fill
+fillColor index 25
+lineWidth 0
+visPv "$(P)$(R)Ramping"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 244
+y 319
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 244
+y 319
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "Shutting Down"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 404
+y 319
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 405
+y 320
+w 14
+h 14
+lineColor index 20
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(P)$(R)ShuttingDown"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 244
+y 339
+w 176
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 244
+y 339
+w 155
+h 16
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "Waveform Active"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 404
+y 339
+w 16
+h 16
+lineColor index 14
+fillColor index 19
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 405
+y 340
+w 14
+h 14
+lineColor index 25
+fill
+fillColor index 25
+lineWidth 0
+visPv "$(P)$(R)WaveformActive"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 204
+y 296
+w 41
+h 17
+font "helvetica-medium-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+value {
+  "Status"
+}
+autoSize
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 245
+y 382
+w 198
+h 17
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 383
+y 382
+w 60
+h 17
+controlPv "$(P)$(R)ShuntTemp"
+font "helvetica-medium-r-14.0"
+fgColor index 14
+fgAlarm
+bgColor index 19
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 7
+useHexPrefix
+useAlarmBorder
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 245
+y 382
+w 130
+h 17
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "Shunt Temperature"
+}
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 245
+y 362
+w 198
+h 17
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 383
+y 362
+w 60
+h 17
+controlPv "$(P)$(R)RegulatorTemp"
+font "helvetica-medium-r-14.0"
+fgColor index 14
+fgAlarm
+bgColor index 19
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 7
+useHexPrefix
+useAlarmBorder
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 245
+y 362
+w 130
+h 17
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "FET Temperature"
+}
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 27
+y 382
+w 178
+h 17
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 27
+y 382
+w 110
+h 17
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "Output Voltage"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 145
+y 382
+w 60
+h 17
+controlPv "$(P)$(R)OutputVoltage"
+font "helvetica-medium-r-14.0"
+fgColor index 14
+fgAlarm
+bgColor index 19
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 7
+useHexPrefix
+useAlarmBorder
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 27
+y 362
+w 178
+h 17
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 145
+y 362
+w 60
+h 17
+controlPv "$(P)$(R)BulkVoltage"
+font "helvetica-medium-r-14.0"
+fgColor index 14
+fgAlarm
+bgColor index 19
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 7
+useHexPrefix
+useAlarmBorder
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 27
+y 362
+w 110
+h 17
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "Bulk Voltage"
+}
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 27
+y 402
+w 178
+h 17
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 17
+y 402
+w 120
+h 17
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 19
+useDisplayBg
+value {
+  "Leakage Amps"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 145
+y 402
+w 60
+h 17
+controlPv "$(P)$(R)LeakageCurrent"
+font "helvetica-medium-r-14.0"
+fgColor index 14
+fgAlarm
+bgColor index 19
+useDisplayBg
+autoHeight
+limitsFromDb
+nullColor index 7
+useHexPrefix
+useAlarmBorder
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+

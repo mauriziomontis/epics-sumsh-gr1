@@ -1,0 +1,2 @@
+registrar(devEasyDriverConfigure_RegisterCommands)
+include "drvAsynIPPort.dbd"
