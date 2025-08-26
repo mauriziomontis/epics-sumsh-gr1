@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-08-26 17:39:24 by hzb-->
+<display version="2.0.0">
+  <name>Display</name>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>TITLE</class>
+    <text>My Display</text>
+    <x use_class="true">0</x>
+    <y use_class="true">0</y>
+    <width>550</width>
+    <height>31</height>
+    <font use_class="true">
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="tabs" version="2.0.0">
+    <name>Tabs</name>
+    <tabs>
+      <tab>
+        <name>Control</name>
+        <children>
+          <widget type="action_button" version="3.0.0">
+            <name>PS_onoff_button</name>
+            <x>28</x>
+            <y>102</y>
+            <tooltip>$(actions)</tooltip>
+          </widget>
+          <widget type="action_button" version="3.0.0">
+            <name>Cal_button</name>
+            <x>48</x>
+            <y>422</y>
+            <width>150</width>
+            <tooltip>$(actions)</tooltip>
+          </widget>
+          <widget type="scaledslider" version="2.0.0">
+            <name>MotorDistance_slider</name>
+            <x>478</x>
+            <y>12</y>
+            <width>55</width>
+            <height>480</height>
+            <horizontal>false</horizontal>
+            <major_tick_step_hint>10</major_tick_step_hint>
+            <show_hihi>false</show_hihi>
+            <show_high>false</show_high>
+            <show_low>false</show_low>
+            <show_lolo>false</show_lolo>
+            <increment>0.01</increment>
+            <maximum>25.0</maximum>
+            <limits_from_pv>false</limits_from_pv>
+          </widget>
+          <widget type="spinner" version="2.0.0">
+            <name>Current_spinner</name>
+            <x>28</x>
+            <y>52</y>
+          </widget>
+          <widget type="label" version="2.0.0">
+            <name>Label_1</name>
+            <text>Current value</text>
+            <x>28</x>
+            <y>22</y>
+            <horizontal_alignment>1</horizontal_alignment>
+            <vertical_alignment>1</vertical_alignment>
+          </widget>
+          <widget type="action_button" version="3.0.0">
+            <name>Action Button_2</name>
+            <x>558</x>
+            <y>452</y>
+            <tooltip>$(actions)</tooltip>
+          </widget>
+          <widget type="rectangle" version="2.0.0">
+            <name>Rectangle_1</name>
+            <x>178</x>
+            <width>10</width>
+            <height>182</height>
+          </widget>
+          <widget type="rectangle" version="2.0.0">
+            <name>Rectangle_2</name>
+            <y>172</y>
+            <width>190</width>
+            <height>10</height>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>Control Data</name>
+        <children>
+          <widget type="meter" version="3.0.0">
+            <name>Meter_4</name>
+            <pv_name>pva://GSMTR:getvolt.VAL</pv_name>
+            <y>12</y>
+            <width>378</width>
+            <height>230</height>
+            <maximum>20.0</maximum>
+          </widget>
+          <widget type="meter" version="3.0.0">
+            <name>Meter_5</name>
+            <pv_name>pva://GSMTR:getmagfield.VAL</pv_name>
+            <y>272</y>
+            <width>410</width>
+            <height>250</height>
+            <maximum>500.0</maximum>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>Results</name>
+        <children>
+          <widget type="xyplot" version="3.0.0">
+            <name>X/Y Plot_2</name>
+            <y>2</y>
+            <width>780</width>
+            <height>260</height>
+            <x_axis>
+              <title>Distance (cm)</title>
+              <autoscale>false</autoscale>
+              <log_scale>false</log_scale>
+              <minimum>0.0</minimum>
+              <maximum>10.0</maximum>
+              <show_grid>false</show_grid>
+              <title_font>
+                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </title_font>
+              <scale_font>
+                <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+                </font>
+              </scale_font>
+              <visible>true</visible>
+            </x_axis>
+            <y_axes>
+              <y_axis>
+                <title>Magnetic field (T)</title>
+                <autoscale>false</autoscale>
+                <log_scale>false</log_scale>
+                <minimum>0.0</minimum>
+                <maximum>500.0</maximum>
+                <show_grid>false</show_grid>
+                <title_font>
+                  <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                  </font>
+                </title_font>
+                <scale_font>
+                  <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+                  </font>
+                </scale_font>
+                <on_right>false</on_right>
+                <visible>true</visible>
+                <color>
+                  <color name="Text" red="0" green="0" blue="0">
+                  </color>
+                </color>
+              </y_axis>
+            </y_axes>
+          </widget>
+        </children>
+      </tab>
+    </tabs>
+    <y>31</y>
+    <width>800</width>
+    <height>569</height>
+    <active_tab>1</active_tab>
+  </widget>
+</display>
