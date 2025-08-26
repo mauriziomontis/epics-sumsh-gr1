@@ -1,0 +1,25 @@
+#Protocol file for IOC communication with gaussmeter
+
+OutTerminator = CR;
+InTerminator = CR;
+
+ReplyTimeout = 1000; #ms
+ReadTimeout = 1000; 
+ExtraInput = Ignore;
+
+#turnon {out "ON 1";}
+
+MOFF {out "MOFF"; in "#AK";} # turn off
+
+MON {out "MON"; in "#AK";} # turn on
+
+MRI {out "MRI"; in "#MRI:%f";} # reads current output
+
+MRM {out "MRM"; in "%s";} # set output current ramping
+
+MRV {out "MRV"; in "#MRV:%f";} # read voltage output
+
+MWI {out "MWI:%f"; in "%s";} # setting current fixed value
+
+MRP {out "MRP"; in "#MRP:%f";} # DC-link voltage value
+

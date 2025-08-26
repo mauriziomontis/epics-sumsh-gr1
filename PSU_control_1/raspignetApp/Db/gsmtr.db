@@ -1,0 +1,43 @@
+record(stringin, "PWRSPL:on"){
+    field(DESC, "turn on PSU")
+    field(DTYP, "stream")
+    field(INP, "@gsmtr.proto MON PWRSPL")
+}
+
+record(stringin, "PWRSPL:off"){
+    field(DESC, "turn off PSU")
+    field(DTYP, "stream")
+    field(INP, "@gsmtr.proto MOFF PWRSPL")
+}
+
+record(ai, "PWRSPL:readI"){
+    field(DESC, "read current output")
+    field(DTYP, "stream")
+    field(INP, "@gsmtr.proto MRI PWRSPL")
+    field(SCAN, "1 second")
+}
+
+record(ao, "PWRSPL:setIramp"){
+    field(DESC, "set output current ramp")
+    field(DTYP, "stream")
+    field(OUT, "@gsmtr.proto MRM PWRSPL")
+}
+
+record(ai, "PWRSPL:readV"){
+    field(DESC, "read voltage")
+    field(DTYP, "stream")
+    field(INP, "@gsmtr.proto MRV PWRSPL")
+    field(SCAN, "1 second")
+}
+
+record(ao, "PWRSPL:setI"){
+    field(DESC, "set fixed current")
+    field(DTYP, "stream")
+    field(OUT, "@gsmtr.proto MWI PWRSPL")
+}
+
+record(ai, "PWRSPL:DClink"){
+    field(DESC, "read DC-link voltage")
+    field(DTYP, "stream")
+    field(INP, "@gsmtr.proto MRP PWRSPL")
+}
