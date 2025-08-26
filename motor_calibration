@@ -1,0 +1,43 @@
+calibration for motor:
+move to low limit
+caput GR1:Ax1_Mtr.VAL -10000
+check for movement (if 0 it stopped)
+caget GR1:Ax1_Mtr.MOVN
+set new 0 position:
+caput GR1:Ax1_Mtr.SET 1      # Use "Set" mode
+caput GR1:Ax1_Mtr.VAL 0      # Set VAL to 0
+caput GR1:Ax1_Mtr.SET 0      # Back to normal mode
+move to maximum:
+caput GR1:Ax1_Mtr.VAL 1000000
+check for movement (if 0 it stopped)
+caget GR1:Ax1_Mtr.MOVN
+read travelled distance:
+caget GR1:Ax1_Mtr.RBV
+set limits:
+caput GR1:Ax1_Mtr.LLM 0
+caput GR1:Ax1_Mtr.HLM 123456 (put travalled distance here)
+
+example script:
+#!/bin/bash
+
+MOTOR=GR1:Ax1_Mtr
+
+# Step 1: Go to zero position
+caput ${MOTOR}.VAL -10000
+while [[ $(caget -t ${MOTOR}.MOVN) == 1 ]]; do sleep 0.2; done
+
+# Step 2: Set VAL to 0
+caput ${MOTOR}.SET 1
+caput ${MOTOR}.VAL 0
+caput ${MOTOR}.SET 0
+
+# Step 3: Move to max
+caput ${MOTOR}.VAL 1000000
+while [[ $(caget -t ${MOTOR}.MOVN) == 1 ]]; do sleep 0.2; done
+
+# Step 4: Record max and set limits
+MAX=$(caget -t ${MOTOR}.RBV)
+caput ${MOTOR}.LLM 0
+caput ${MOTOR}.HLM $MAX
+
+echo "Calibration complete. Max position: $MAX"
