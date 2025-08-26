@@ -8,6 +8,12 @@
 
 ## Participants
 
+**Fatima Langhchim**
+**Gregorio Lamarca Garcia**
+**Lukas Nielsen**
+**Marco Andres Auza Sanchez**
+**Will Torry**
+
 
 ## Netwoek
 
