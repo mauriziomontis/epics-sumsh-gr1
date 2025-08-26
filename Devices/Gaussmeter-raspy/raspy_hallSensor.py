@@ -10,8 +10,6 @@ Description:
     Based on the code provided by EPICS Community for USPAS Training.
 
 
-172.30.0.0 / 16   
-
 """
 
 __author__ = "Maurizio Montis"
@@ -46,9 +44,9 @@ READ_INTERVAL  = 0.20     # secs between readings (MODE continuous)
 # Note: (top=10k, bottom=20k) => V_adc = V_sens * 2/3  => V_sens = V_adc * 1.5
 DIVIDER_RATIO  = 1      # ratio used to find the real sensor voltage
 
-# Hall Sensor Calibration (tipica per A1302 ~2.5 mV/G).
-V0             = 2.50     # Volt for Zero Magnet Field  
-SENS_V_PER_G   = 0.0025   # Sensibility in V/G (2.5 mV/G). (Remember: 1 Tesla = 10_000 Gauss :D )
+# Hall Sensor Calibration ( A1302 ~2.5 mV/G).
+V0             = 1.5     # Volt for Zero Magnet Field  
+SENS_V_PER_G   = 0.0014   # Sensibility in V/G (1.4 mV/G). (Remember: 1 Tesla = 10_000 Gauss :D )
 # ====================================================================
 
 status = {}
@@ -71,8 +69,9 @@ def read_sample(chn):
     v_adc = chn.voltage                     
     v_sens = v_adc * DIVIDER_RATIO          
     delta_v = v_sens - V0
-    B_gauss = delta_v / SENS_V_PER_G        # G = V / (V/G)
-    return v_adc, v_sens, B_gauss
+    B_gauss = - delta_v / SENS_V_PER_G        # G = V / (V/G)
+    #return v_adc, v_sens, B_gauss
+    return v_adc, delta_v, B_gauss
 
 
 class HallSensor(socketserver.StreamRequestHandler):
