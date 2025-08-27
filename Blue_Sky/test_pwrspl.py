@@ -22,7 +22,7 @@ RE = RunEngine()
 # Subscribe a LiveTable to show the current readback
 RE.subscribe(LiveTable([psu.current_RB]))
 
-# Perform a scan moving the PSU setpoint from 0 A to 7 A in 11 steps
+# Perform a scan moving the PSU setpoint from -7 A to 7 A in 15 steps
 RE(scan([], psu, -7, 7, 15))
 
 psu.toff()
