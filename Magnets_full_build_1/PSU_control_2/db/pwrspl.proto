@@ -1,0 +1,47 @@
+#Protocol file for IOC communication with PSU
+
+OutTerminator = CR;
+InTerminator = CR;
+
+ReplyTimeout = 1000; #ms
+ReadTimeout = 1000; 
+ExtraInput = Ignore;
+
+# FDB {out ""; in "";} # feedback command
+
+MOFF {out "MOFF"; in "#AK";} # turn off
+
+MON {out "MON"; in "#AK";} # turn on
+
+MRESET {out "MRESET"; in "#AK";} # reset whole module
+
+# MRG {out "MRG:%i"; in "%s";} # cell information 0-511
+
+MRI {out "MRI"; in "#MRI:%f";} # reads current output
+
+MRID {out "MRID"; in "#MRID:%s";} # read id-name of the device
+
+MRM {out "MRM:%f"; in "#AK";} # set output current ramping
+
+MRP {out "MRP"; in "#MRP:%f";} # DC-link voltage value
+
+MRSR {out "MRSR"; in "#MRSR:%f";} # read ramp slew rating
+
+MRT {out "MRT"; in "#MRT:%f";} # read temperature at MOFSET heatsink
+
+MRTS {out "MRTS"; in "#MRTS:%f";} # read temp at resistor case
+
+MRV {out "MRV"; in "#MRV:%f";} # read voltage output
+
+# MST {out ""; in "";} # register status
+
+# MVER {out "MVER"; in "#MVER:%s";} # firmware version
+
+# MWG {out ""; in "";} # EEPROM cell
+
+# MPUP {out ""; in "";} # EEPROM output
+
+MWSR {out "MWSR:%f"; in "#AK";} # set slew rate in A/s
+
+MWI {out "MWI:%f"; in "#AK";} # setting current fixed value
+

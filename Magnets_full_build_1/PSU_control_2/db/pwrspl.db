@@ -1,0 +1,111 @@
+record(stringin, "PWRSPL:on"){
+    field(DESC, "turn on PSU")
+    field(DTYP, "stream")
+    field(INP, "@pwrspl.proto MON PWRSPL")
+}
+
+record(stringin, "PWRSPL:off"){
+    field(DESC, "turn off PSU")
+    field(DTYP, "stream")
+    field(INP, "@pwrspl.proto MOFF PWRSPL")
+}
+
+record(stringin, "PWRSPL:reset"){
+    field(DESC, "reset PSU")
+    field(DTYP, "stream")
+    field(INP, "@pwrspl.proto MRESET PWRSPL")
+}
+
+record(ai, "PWRSPL:readI"){
+    field(DESC, "read current output")
+    field(DTYP, "stream")
+    field(INP, "@pwrspl.proto MRI PWRSPL")
+    field(SCAN, "1 second")
+}
+
+record(stringin, "PWRSPL:ID"){
+    field(DESC, "ID of PSU")
+    field(DTYP, "stream")
+    field(INP, "@pwrspl.proto MRID PWRSPL")
+}
+
+record(ai, "PWRSPL:setIramp"){
+    field(DESC, "set output current ramp")
+}
+
+record(ai, "PWRSPL:readslewrate"){
+    field(DESC, "read slew rate")
+    field(DTYP, "stream")
+    field(INP, "@pwrspl.proto MRSR PWRSPL")
+    field(SCAN, "1 second")
+}
+
+record(ai, "PWRSPL:temp1"){
+    field(DESC, "temp at heatsink")
+    field(DTYP, "stream")
+    field(INP, "@pwrspl.proto MRT PWRSPL")
+    field(SCAN, "1 second")
+}
+
+record(ai, "PWRSPL:temp2"){
+    field(DESC, "temp at resistor case")
+    field(DTYP, "stream")
+    field(INP, "@pwrspl.proto MRTS PWRSPL")
+    field(SCAN, "1 second")
+}
+
+record(ai, "PWRSPL:readV"){
+    field(DESC, "read voltage")
+    field(DTYP, "stream")
+    field(INP, "@pwrspl.proto MRV PWRSPL")
+    field(SCAN, "1 second")
+}
+
+#record(ai, "PWRSPL:setI"){
+#    field(DESC, "configure current")
+#    field(VAL, "0")
+#}
+
+record(bo, "PWRSPL:confirm") {
+    field(DESC, "Trigger current change")
+    field(ZNAM, "Idle")
+    field(ONAM, "Confirm")
+    field(FLNK, "PWRSPL:changecurrent")  # Triggers action
+}
+
+record(ao, "PWRSPL:currentchange") {
+    field(DESC, "desired change in current")
+    field(VAL, "0")
+    field(PREC, "2")
+    field(EGU, "A")
+}
+
+record(ao, "PWRSPL:changecurrent") {
+    field(DESC, "Applies staged current via StreamDevice")
+    field(DTYP, "stream")
+    field(OUT, "@pwrspl.proto MRM PWRSPL")  # Your stream protocol function
+    field(DOL, "PWRSPL:currentchange CP")       # Pull value from staging record
+    field(OMSL, "closed_loop")                  # Use DOL source on process
+    field(PREC, "2")
+    field(EGU, "A")
+}
+
+record(ao, "PWRSPL:putI"){
+    field(DESC, "set cofigured current")
+    field(DTYP, "stream")
+    field(OUT, "@pwrspl.proto MRM PWRSPL")
+    field(SCAN, "Passive")
+}
+
+record(ao, "PWRSPL:setslew"){
+    field(DESC, "set slew rate in A/s")
+    field(DTYP, "stream")
+    field(OUT, "@pwrspl.proto MWSR PWRSPL")
+}
+
+record(ai, "PWRSPL:DClink"){
+    field(DESC, "read DC-link voltage")
+    field(DTYP, "stream")
+    field(INP, "@pwrspl.proto MRP PWRSPL")
+    field(SCAN, "1 second")
+}
