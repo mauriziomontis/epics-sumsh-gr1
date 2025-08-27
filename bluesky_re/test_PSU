@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+
+from bluesky import RunEngine
+from bluesky.plans import count, scan, list_scan
+from bluesky.callbacks import LiveTable
+from PSU_ophyd import PowerSupply
+from gaussmeter import Gaussmeter
+
+def callback(status):
+	print("Done: ", status)
+	
+#psu = PowerSupply("GROUP5:PS:", name="setI")
+psu = PowerSupply("GROUP5:PS:", name="psu")
+status = psu.set(4)
+print(status)
+#status.add_callback(callback)
+
+#gm = Gaussmeter("group5:", name="gm")
+#gm.wait_for_connection()
+
+RE = RunEngine()
+#token = RE.subscribe(LiveTable([setI, gm]))
+#RE(count([gm.MField]))
+#RE(count([setI]))
+#RE(scan([gm.MField], psu.setI, 0, 5, 6))
+token = RE.subscribe(LiveTable([psu.current_RB]))
+RE(scan([], psu, 0, 5, 6))
+
+
