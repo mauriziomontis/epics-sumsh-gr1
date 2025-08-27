@@ -3,16 +3,13 @@
 from ophyd import Component, Device, EpicsSignal, EpicsSignalRO#, Status
 from ophyd.status import Status
 
-class PowerSupply(Device):
+class pwrspl(Device):
 
-	voltage_RB = Component(EpicsSignalRO, "VOLTAGE_RB", kind="hinted")
-	current_RB = Component(EpicsSignalRO, "CURRENT_RB", kind="hinted")
-	#current_RB = Component(EpicsSignalRO, "xxxExample")
-	skewrate_RB = Component(EpicsSignalRO, "SKEW_RATE_RB")
-	
+	voltage_RB = Component(EpicsSignalRO, "VOLTAGE_RB")
+	current_RB = Component(EpicsSignalRO, "CURRENT_RB")
+
 	current_SP = Component(EpicsSignal, "CURRENT_SP")
-	#current_SP = Component(EpicsSignal, "subExample")
-	skewrate_SP = Component(EpicsSignal, "SKEW_RATE_SP")
+	
 	
 	onoff_switch = Component(EpicsSignal, "ONOFF.PROC")
 	onoff_status = Component(EpicsSignal, "STATUSREGISTER.B0")
