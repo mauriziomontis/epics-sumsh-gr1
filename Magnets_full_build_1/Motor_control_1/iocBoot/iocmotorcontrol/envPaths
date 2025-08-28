@@ -1,5 +1,0 @@
-epicsEnvSet("IOC","iocmotorcontrol")
-epicsEnvSet("TOP","/home/iocadm/workspace/Magnets_full_build_01/Motor_control_1")
-epicsEnvSet("EPICS_BASE","/opt/epics/base-7.0.9")
-epicsEnvSet("STREAM","/opt/epics/stream-2.8.24/")
-epicsEnvSet("ASYN","/opt/epics/asyn-4.44.2/")
