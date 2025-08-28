@@ -2,6 +2,7 @@ record(stringin, "GSMTR:turnon"){
     field(DESC, "Activate gaussmeter")
     field(DTYP, "stream")
     field(INP, "@gsmtr.proto turnon RASPY1")
+    field(PINI, "YES")
 }
 
 record(stringin, "GSMTR:turnoff"){
@@ -30,7 +31,7 @@ record(ai, "GSMTR:getmagfield"){
     field(DESC, "Read magnetic field data")
     field(DTYP, "stream")
     field(INP, "@gsmtr.proto getmagfield() RASPY1")
-    field(SCAN, "1 second")
+    field(SCAN, ".5 second")
     field(DISV, "0")
     field(SDIS, "GSMTR:getstatus PP")
     field(EGU, "gauss")
@@ -40,7 +41,7 @@ record(ai, "GSMTR:getvolt"){
     field(DESC, "Read voltage data")
     field(DTYP, "stream")
     field(INP, "@gsmtr.proto getvolt() RASPY1")
-    field(SCAN, "1 second")
+    field(SCAN, ".5 second")
     field(DISV, "0")
     field(SDIS, "GSMTR:getstatus PP")
     field(EGU, "volt")
