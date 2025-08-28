@@ -1,0 +1,45 @@
+record(ao, "$(P)move"){
+    field(OUT, "$(MOTOR).VAL PP")
+}
+
+record(calcout, "$(P)mmtostep"){
+    field(DESC, "converts mm to steps for the motor")
+    field(INPA, "$(P)mminput")
+    field(CALC, "-(A*200)")
+    field(OUT, "$(P)move")
+    #field(FLNK, "$(P)move")
+}
+
+record(ai, "$(P)mminput"){
+    field(DESC, "mm to move the motor")
+    field(EGU, "mm")
+    field(FLNK, "$(P)mmtostep")
+}
+
+record(bo, "$(P)confirmMove") {
+    field(DESC, "confirm movement of motor")
+    field(ZNAM, "Idle")
+    field(ONAM, "Confirm")
+    field(PINI, "YES")
+    field(FLNK, "$(P)move")}
+
+record(sub, "$(P)RunCalibration") {
+    field(DESC, "Run motor calibration script")
+    field(INAM, "initCalibrate")
+    field(SNAM, "runCalibrate")
+    field(SCAN, "Passive")
+}
+
+record(ai, "$(P)readPos"){
+    field(DESC, "read current position in steps")
+    field(INP, "$(MOTOR).VAL")
+    field(SCAN, ".5 second")
+    field(EGU, "steps")
+    field(FLNK, "$(P)readmm")
+}
+
+record(calcout, "$(P)readmm"){
+    field(DESC, "read position in mm")
+    field(INPA, "$(P)readPos")
+    field(CALC, "-(A/200)")
+}
