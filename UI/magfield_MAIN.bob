@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-08-27 15:44:38 by hzb-->
+<display version="2.0.0">
+  <name>Main</name>
+  <widget type="group" version="3.0.0">
+    <name>Statleds</name>
+    <width>360</width>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>STATLED_background</name>
+      <width>360</width>
+      <height>200</height>
+      <line_color>
+        <color name="Header_Background" red="77" green="77" blue="77">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>POWSUPSTAT_Label</name>
+      <text>POWER SUPPLY STATUS</text>
+      <x>10</x>
+      <y>10</y>
+      <width>300</width>
+      <height>40</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>MOTORSTAT_label</name>
+      <text>STEPPER MOTOR STATUS</text>
+      <x>10</x>
+      <y>80</y>
+      <width>300</width>
+      <height>40</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>MAGNETSTAT_label</name>
+      <text>GAUSSMETER STATUS</text>
+      <x>10</x>
+      <y>150</y>
+      <width>300</width>
+      <height>40</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="multi_state_led" version="2.0.0">
+      <name>POWSUP_multiled</name>
+      <x>300</x>
+      <y>10</y>
+      <width>40</width>
+      <height>40</height>
+      <states>
+        <state>
+          <value>0</value>
+          <label></label>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>1</value>
+          <label></label>
+          <color>
+            <color name="On" red="0" green="255" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>2</value>
+          <label></label>
+          <color>
+            <color name="STOP" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+      </states>
+      <fallback_label></fallback_label>
+    </widget>
+    <widget type="multi_state_led" version="2.0.0">
+      <name>MOTOR_multiled</name>
+      <x>300</x>
+      <y>80</y>
+      <width>40</width>
+      <height>40</height>
+      <states>
+        <state>
+          <value>0</value>
+          <label></label>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>1</value>
+          <label></label>
+          <color>
+            <color name="On" red="0" green="255" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>2</value>
+          <label></label>
+          <color>
+            <color name="STOP" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+      </states>
+      <fallback_label></fallback_label>
+    </widget>
+    <widget type="multi_state_led" version="2.0.0">
+      <name>MAGNET_multiled</name>
+      <x>300</x>
+      <y>150</y>
+      <width>40</width>
+      <height>40</height>
+      <states>
+        <state>
+          <value>0</value>
+          <label></label>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>1</value>
+          <label></label>
+          <color>
+            <color name="On" red="0" green="255" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>2</value>
+          <label></label>
+          <color>
+            <color name="STOP" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+      </states>
+      <fallback_label></fallback_label>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Group</name>
+    <x>360</x>
+    <width>440</width>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>READ_background</name>
+      <width>440</width>
+      <height>200</height>
+      <line_color>
+        <color name="Header_Background" red="77" green="77" blue="77">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>POWSUPREAD_Label</name>
+      <text>POWER SUPPLY CURRENT</text>
+      <x>20</x>
+      <y>10</y>
+      <width>300</width>
+      <height>40</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>MOTORREAD_label</name>
+      <text>STEPPER MOTOR POSITION</text>
+      <x>20</x>
+      <y>80</y>
+      <width>300</width>
+      <height>40</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>MAGNETREAD_label</name>
+      <text>GAUSSMETER READOUT</text>
+      <x>20</x>
+      <y>150</y>
+      <width>300</width>
+      <height>40</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>PSUREAD_monitor</name>
+      <x>280</x>
+      <y>10</y>
+      <width>140</width>
+      <height>30</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>MOTORREAD_monitor</name>
+      <x>280</x>
+      <y>80</y>
+      <width>140</width>
+      <height>30</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>MAGFIELD_monitor</name>
+      <x>280</x>
+      <y>150</y>
+      <width>140</width>
+      <height>30</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Result_graph</name>
+    <y>200</y>
+    <width>800</width>
+    <height>400</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>graph_background</name>
+      <width>800</width>
+      <height>400</height>
+      <line_color>
+        <color name="Header_Background" red="77" green="77" blue="77">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>RESULTS</name>
+      <text>EXPERIMENT DATA</text>
+      <x>10</x>
+      <y>10</y>
+      <width>300</width>
+      <height>40</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="image" version="2.0.0">
+      <name>results_image</name>
+      <x>10</x>
+      <y>40</y>
+      <width>750</width>
+      <height>350</height>
+      <x_axis>
+        <visible>true</visible>
+        <title>Position (mm)</title>
+        <minimum>0.0</minimum>
+        <maximum>100.0</maximum>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+      </x_axis>
+      <y_axis>
+        <visible>true</visible>
+        <title>Current strength (A)</title>
+        <minimum>0.0</minimum>
+        <maximum>10.0</maximum>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+      </y_axis>
+    </widget>
+    <widget type="rectangle" version="2.0.0">
+      <name>graph_exension</name>
+      <x>760</x>
+      <y>40</y>
+      <width>30</width>
+      <height>350</height>
+      <line_width>0</line_width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Color_explainer</name>
+      <text>Magnetic field strength (G)</text>
+      <x>770</x>
+      <y>100</y>
+      <width>20</width>
+      <height>180</height>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <rotation_step>1</rotation_step>
+    </widget>
+  </widget>
+</display>
