@@ -9,7 +9,7 @@
 ## Participants
 
 **Fatima Langhchim**, **Gregorio Lamarca Garcia**, **Lukas Nielsen**, **Marco Andres Auza Sanchez**, **Will Torry**
-
+Presentation-Link: https://docs.google.com/presentation/d/1DB0p3pl1iEVckOlvQWVM4fzmQlq5Km99/edit?usp=sharing&ouid=100207046298667084826&rtpof=true&sd=true
 
 ## Netwoek
 
