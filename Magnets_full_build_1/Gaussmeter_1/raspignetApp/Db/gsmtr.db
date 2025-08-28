@@ -2,6 +2,7 @@ record(stringin, "GSMTR:turnon"){
     field(DESC, "Activate gaussmeter")
     field(DTYP, "stream")
     field(INP, "@gsmtr.proto turnon RASPY1")
+    field(PINI, "YES")
 }
 
 record(stringin, "GSMTR:turnoff"){
