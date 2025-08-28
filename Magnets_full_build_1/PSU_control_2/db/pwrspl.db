@@ -2,12 +2,14 @@ record(stringin, "PWRSPL:on"){
     field(DESC, "turn on PSU")
     field(DTYP, "stream")
     field(INP, "@pwrspl.proto MON PWRSPL")
-    field(PINI, "YES")}
+    field(PINI, "YES")
+    field(FLNK, "switch")}
 
 record(stringin, "PWRSPL:off"){
     field(DESC, "turn off PSU")
     field(DTYP, "stream")
-    field(INP, "@pwrspl.proto MOFF PWRSPL")}
+    field(INP, "@pwrspl.proto MOFF PWRSPL")
+    field(FLNK, "switch")}
 
 record(stringin, "PWRSPL:reset"){
     field(DESC, "reset PSU")
@@ -38,6 +40,10 @@ record(ai, "PWRSPL:temp1"){
     field(DTYP, "stream")
     field(INP, "@pwrspl.proto MRT PWRSPL")
     field(SCAN, "1 second")
+    field(HIHI, "60")
+    field(HIGH, "50")
+    field(HHSV, "MAJOR")
+    field(HSV, "MINOR")
     field(EGU, "degC")}
 
 record(ai, "PWRSPL:temp2"){
@@ -45,6 +51,10 @@ record(ai, "PWRSPL:temp2"){
     field(DTYP, "stream")
     field(INP, "@pwrspl.proto MRTS PWRSPL")
     field(SCAN, "1 second")
+    field(HIHI, "60")
+    field(HIGH, "50")
+    field(HHSV, "MAJOR")
+    field(HSV, "MINOR")
     field(EGU, "degC")}
 
 record(ai, "PWRSPL:readV"){
