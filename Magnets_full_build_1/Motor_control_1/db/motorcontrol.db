@@ -7,7 +7,7 @@ record(calcout, "$(P)mmtostep"){
     field(INPA, "$(P)mminput")
     field(CALC, "-(A*200)")
     field(OUT, "$(P)move")
-    field(FLNK, "$(P)move")
+    #field(FLNK, "$(P)move")
 }
 
 record(ai, "$(P)mminput"){
@@ -15,6 +15,13 @@ record(ai, "$(P)mminput"){
     field(EGU, "mm")
     field(FLNK, "$(P)mmtostep")
 }
+
+record(bo, "$(P)confirmMove") {
+    field(DESC, "confirm movement of motor")
+    field(ZNAM, "Idle")
+    field(ONAM, "Confirm")
+    field(PINI, "YES")
+    field(FLNK, "$(P)move")}
 
 record(sub, "$(P)RunCalibration") {
     field(DESC, "Run motor calibration script")
@@ -24,7 +31,15 @@ record(sub, "$(P)RunCalibration") {
 }
 
 record(ai, "$(P)readPos"){
-    field(DESC, "read current position")
+    field(DESC, "read current position in steps")
     field(INP, "$(MOTOR).VAL")
-    field(SCAN, "1 second")
+    field(SCAN, ".5 second")
+    field(EGU, "steps")
+    field(FLNK, "$(P)readmm")
+}
+
+record(calcout, "$(P)readmm"){
+    field(DESC, "read position in mm")
+    field(INPA, "$(P)readPos")
+    field(CALC, "-(A/200)")
 }
