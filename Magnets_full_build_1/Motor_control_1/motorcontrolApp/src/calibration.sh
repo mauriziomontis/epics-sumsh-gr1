@@ -8,7 +8,7 @@ caput ${MOTOR}.HLM 654654654654
 
 # Step 1: Go to zero position
 caput ${MOTOR}.VAL 10000
-sleep 3
+sleep 1
 while [[ $(caget -t ${MOTOR}.MOVN) == 1 ]]; do sleep 0.2; done
 
 # Step 2: Set VAL to 0
@@ -18,7 +18,7 @@ caput ${MOTOR}.SET 0
 
 # move away from switch
 caput ${MOTOR}.VAL -400
-sleep 3
+sleep 1
 while [[ $(caget -t ${MOTOR}.MOVN) == 1 ]]; do sleep 0.2; done
 
 # set new 0 (home) and limits

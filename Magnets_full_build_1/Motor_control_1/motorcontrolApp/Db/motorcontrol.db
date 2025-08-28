@@ -7,7 +7,6 @@ record(calcout, "$(P)mmtostep"){
     field(INPA, "$(P)mminput")
     field(CALC, "-(A*200)")
     field(OUT, "$(P)move")
-    #field(FLNK, "$(P)move")
 }
 
 record(ai, "$(P)mminput"){
