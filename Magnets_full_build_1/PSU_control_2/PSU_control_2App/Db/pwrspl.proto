@@ -7,7 +7,12 @@ ReplyTimeout = 1000; #ms
 ReadTimeout = 1000; 
 ExtraInput = Ignore;
 
-# FDB {out ""; in "";} # feedback command
+#FDB {out "FDB:%2c:%f"; in "#FDB:%c";} # feedback command
+
+FDB {
+    out "FDB:%s:%s"
+    in  "#FDB:%*[^:]:%s:%s"  # Skip the command name, read status_reg and current values
+}
 
 MOFF {out "MOFF"; in "#AK";} # turn off
 
@@ -33,7 +38,7 @@ MRTS {out "MRTS"; in "#MRTS:%f";} # read temp at resistor case
 
 MRV {out "MRV"; in "#MRV:%f";} # read voltage output
 
-# MST {out ""; in "";} # register status
+MST {out "MST"; in "#MST:%s";} # register status
 
 # MVER {out "MVER"; in "#MVER:%s";} # firmware version
 

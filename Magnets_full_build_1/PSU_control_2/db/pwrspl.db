@@ -2,110 +2,121 @@ record(stringin, "PWRSPL:on"){
     field(DESC, "turn on PSU")
     field(DTYP, "stream")
     field(INP, "@pwrspl.proto MON PWRSPL")
-}
+    field(PINI, "YES")}
 
 record(stringin, "PWRSPL:off"){
     field(DESC, "turn off PSU")
     field(DTYP, "stream")
-    field(INP, "@pwrspl.proto MOFF PWRSPL")
-}
+    field(INP, "@pwrspl.proto MOFF PWRSPL")}
 
 record(stringin, "PWRSPL:reset"){
     field(DESC, "reset PSU")
     field(DTYP, "stream")
-    field(INP, "@pwrspl.proto MRESET PWRSPL")
-}
+    field(INP, "@pwrspl.proto MRESET PWRSPL")}
 
 record(ai, "PWRSPL:readI"){
     field(DESC, "read current output")
     field(DTYP, "stream")
     field(INP, "@pwrspl.proto MRI PWRSPL")
     field(SCAN, "1 second")
-}
+    field(EGU, "A")}
 
 record(stringin, "PWRSPL:ID"){
     field(DESC, "ID of PSU")
     field(DTYP, "stream")
-    field(INP, "@pwrspl.proto MRID PWRSPL")
-}
-
-record(ai, "PWRSPL:setIramp"){
-    field(DESC, "set output current ramp")
-}
+    field(INP, "@pwrspl.proto MRID PWRSPL")}
 
 record(ai, "PWRSPL:readslewrate"){
     field(DESC, "read slew rate")
     field(DTYP, "stream")
     field(INP, "@pwrspl.proto MRSR PWRSPL")
     field(SCAN, "1 second")
-}
+    field(EGU, "A/s")}
 
 record(ai, "PWRSPL:temp1"){
     field(DESC, "temp at heatsink")
     field(DTYP, "stream")
     field(INP, "@pwrspl.proto MRT PWRSPL")
     field(SCAN, "1 second")
-}
+    field(EGU, "degC")}
 
 record(ai, "PWRSPL:temp2"){
     field(DESC, "temp at resistor case")
     field(DTYP, "stream")
     field(INP, "@pwrspl.proto MRTS PWRSPL")
     field(SCAN, "1 second")
-}
+    field(EGU, "degC")}
 
 record(ai, "PWRSPL:readV"){
     field(DESC, "read voltage")
     field(DTYP, "stream")
     field(INP, "@pwrspl.proto MRV PWRSPL")
     field(SCAN, "1 second")
-}
-
-#record(ai, "PWRSPL:setI"){
-#    field(DESC, "configure current")
-#    field(VAL, "0")
-#}
+    field(EGU, "V")}
 
 record(bo, "PWRSPL:confirm") {
     field(DESC, "Trigger current change")
     field(ZNAM, "Idle")
     field(ONAM, "Confirm")
-    field(FLNK, "PWRSPL:changecurrent")  # Triggers action
-}
+    field(PINI, "YES")
+    field(FLNK, "PWRSPL:changecurrent")}
 
 record(ao, "PWRSPL:currentchange") {
     field(DESC, "desired change in current")
     field(VAL, "0")
-    field(PREC, "2")
-    field(EGU, "A")
-}
+    field(PREC, "3")
+    field(EGU, "A")}
 
 record(ao, "PWRSPL:changecurrent") {
     field(DESC, "Applies staged current via StreamDevice")
     field(DTYP, "stream")
     field(OUT, "@pwrspl.proto MRM PWRSPL")  # Your stream protocol function
-    field(DOL, "PWRSPL:currentchange CP")       # Pull value from staging record
+    field(DOL, "PWRSPL:currentchange")       # Pull value from staging record
     field(OMSL, "closed_loop")                  # Use DOL source on process
-    field(PREC, "2")
-    field(EGU, "A")
-}
+    field(PREC, "3")
+    field(EGU, "A")}
 
+# old instant change to current
 record(ao, "PWRSPL:putI"){
     field(DESC, "set cofigured current")
     field(DTYP, "stream")
     field(OUT, "@pwrspl.proto MRM PWRSPL")
-    field(SCAN, "Passive")
-}
+    field(SCAN, "Passive")}
 
-record(ao, "PWRSPL:setslew"){
-    field(DESC, "set slew rate in A/s")
+record(ao, "PWRSPL:set_slew"){
+    field(DESC, "target slew rate in A/s")
+    field(VAL, "1")
+    field(PREC, "3")
+    field(EGU, "A/s")}
+
+record(bo, "PWRSPL:confirm_slew") {
+    field(DESC, "confirms new slew rate")
+    field(ZNAM, "Idle")
+    field(ONAM, "Confirm")
+    field(PINI, "YES")
+    field(FLNK, "PWRSPL:change_slew")}
+
+record(ao, "PWRSPL:change_slew") {
+    field(DESC, "Applies staged slew rate via StreamDevice")
     field(DTYP, "stream")
     field(OUT, "@pwrspl.proto MWSR PWRSPL")
-}
+    field(DOL, "PWRSPL:set_slew")       # Pull value from staging record
+    field(OMSL, "closed_loop")                  # Use DOL source on process
+    field(PREC, "3")
+    field(EGU, "A/s")}
 
 record(ai, "PWRSPL:DClink"){
     field(DESC, "read DC-link voltage")
     field(DTYP, "stream")
     field(INP, "@pwrspl.proto MRP PWRSPL")
-    field(SCAN, "1 second")
-}
+    field(SCAN, "1 second")}
+
+record(stringin, "PWRSPL:readreg") {
+    field(DESC, "reads internal register")
+    field(DTYP, "stream")
+    field(INP,  "@pwrspl.proto MST PWRSPL")}
+
+#record(stringin, "PWRSPL:FDB") {
+#    field(DESC, "sending the feedback cmd FDB:set_reg:value")
+#    field(DTYP, "stream")
+#    field(INP,  "@pwrspl.proto FDB PWRSPL")}
