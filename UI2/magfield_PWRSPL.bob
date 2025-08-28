@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-08-28 16:20:57 by hzb-->
+<display version="2.0.0">
+  <name>Power supply simple</name>
+  <widget type="group" version="3.0.0">
+    <name>Background_elements</name>
+    <width>800</width>
+    <height>600</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>control_background</name>
+      <width>800</width>
+      <height>95</height>
+      <line_color>
+        <color name="Header_Background" red="77" green="77" blue="77">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="rectangle" version="2.0.0">
+      <name>TEMPdiangsotics_background</name>
+      <y>355</y>
+      <width>800</width>
+      <height>245</height>
+      <line_color>
+        <color name="Header_Background" red="77" green="77" blue="77">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="rectangle" version="2.0.0">
+      <name>POWERdiangsotics_background</name>
+      <y>110</y>
+      <width>800</width>
+      <height>245</height>
+      <line_color>
+        <color name="Header_Background" red="77" green="77" blue="77">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="rectangle" version="2.0.0">
+      <name>controldiagnostics_divider</name>
+      <y>95</y>
+      <width>800</width>
+      <height>15</height>
+      <line_color>
+        <color name="Header_Background" red="77" green="77" blue="77">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>POWSUP_control</name>
+      <x>20</x>
+      <y>10</y>
+      <width>770</width>
+      <height>80</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="bool_button" version="2.0.0">
+        <name>POWSUP_mainButton</name>
+        <pv_name>PWRSPL:on</pv_name>
+        <y>30</y>
+        <height>50</height>
+        <off_label>On</off_label>
+        <foreground_color>
+          <color name="Background" red="255" green="255" blue="255">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </background_color>
+        <mode>1</mode>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>MAIN_Label</name>
+        <text>POWER ON</text>
+        <width>110</width>
+        <height>40</height>
+        <font>
+          <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+          </font>
+        </font>
+      </widget>
+      <widget type="bool_button" version="2.0.0">
+        <name>POWSUP_mainButton_2</name>
+        <pv_name>PWRSPL:off</pv_name>
+        <x>150</x>
+        <y>30</y>
+        <height>50</height>
+        <on_image>Off</on_image>
+        <foreground_color>
+          <color name="Background" red="255" green="255" blue="255">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </background_color>
+        <mode>1</mode>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>MAIN_Label_1</name>
+        <text>POWER OFF</text>
+        <x>140</x>
+        <width>110</width>
+        <height>40</height>
+        <font>
+          <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+          </font>
+        </font>
+      </widget>
+      <widget type="bool_button" version="2.0.0">
+        <name>CURRENT CONFIRM</name>
+        <pv_name>PWRSPL:confirm</pv_name>
+        <x>600</x>
+        <y>10</y>
+        <off_label>Confirm</off_label>
+        <on_label>Confirm</on_label>
+        <show_led>false</show_led>
+        <mode>1</mode>
+      </widget>
+      <widget type="spinner" version="2.0.0">
+        <name>POWSUP_currentSpinner</name>
+        <pv_name>PWRSPL:currentchange</pv_name>
+        <x>446</x>
+        <y>10</y>
+        <width>144</width>
+        <height>30</height>
+        <font>
+          <font family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <precision>1</precision>
+        <background_color>
+          <color name="Background" red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <vertical_alignment>1</vertical_alignment>
+        <minimum>-10.0</minimum>
+        <maximum>10.0</maximum>
+        <limits_from_pv>false</limits_from_pv>
+        <increment>0.1</increment>
+      </widget>
+      <widget type="spinner" version="2.0.0">
+        <name>POWSUP_currentslewSpinner</name>
+        <pv_name>PWRSPL:set_slew</pv_name>
+        <x>446</x>
+        <y>50</y>
+        <width>144</width>
+        <height>30</height>
+        <font>
+          <font family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <precision>1</precision>
+        <background_color>
+          <color name="Background" red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <vertical_alignment>1</vertical_alignment>
+        <maximum>20.0</maximum>
+        <increment>0.1</increment>
+      </widget>
+      <widget type="bool_button" version="2.0.0">
+        <name>CURRENT CONFIRM_1</name>
+        <pv_name>PWRSPL:confirm_slew</pv_name>
+        <x>600</x>
+        <y>50</y>
+        <off_label>Confirm</off_label>
+        <on_label>Confirm</on_label>
+        <show_led>false</show_led>
+        <mode>1</mode>
+      </widget>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>RATECONTROL_Llabel</name>
+      <text>SLEW RATE</text>
+      <x>346</x>
+      <y>60</y>
+      <width>110</width>
+      <height>40</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>CURRENTCONTROL_Label</name>
+      <text>CURRENT</text>
+      <x>346</x>
+      <y>20</y>
+      <width>110</width>
+      <height>40</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>TEMP_diagnostics</name>
+    <x>20</x>
+    <y>355</y>
+    <width>750</width>
+    <height>240</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>TEMPMOF_Label</name>
+      <text>TEMPERATURE SHUNT</text>
+      <x>370</x>
+      <y>135</y>
+      <width>300</width>
+      <height>40</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>TEMPRES_Label</name>
+      <text>TEMPERATURE HEATSINK</text>
+      <x>370</x>
+      <y>20</y>
+      <width>300</width>
+      <height>40</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="tank" version="2.0.0">
+      <name>Tank</name>
+      <pv_name>PWRSPL:temp1</pv_name>
+      <x>370</x>
+      <y>60</y>
+      <width>300</width>
+      <height>60</height>
+      <horizontal>true</horizontal>
+      <limits_from_pv>false</limits_from_pv>
+      <maximum>70.0</maximum>
+    </widget>
+    <widget type="tank" version="2.0.0">
+      <name>Tank_1</name>
+      <pv_name>PWRSPL:temp2</pv_name>
+      <x>370</x>
+      <y>165</y>
+      <width>300</width>
+      <height>60</height>
+      <horizontal>true</horizontal>
+      <limits_from_pv>false</limits_from_pv>
+      <maximum>70.0</maximum>
+    </widget>
+    <widget type="meter" version="3.0.0">
+      <name>SLWERATE_meter</name>
+      <pv_name>PWRSPL:readslewrate</pv_name>
+      <y>60</y>
+      <width>300</width>
+      <height>170</height>
+      <limits_from_pv>false</limits_from_pv>
+      <needle_color>
+        <color name="Attention" red="255" green="160" blue="0">
+        </color>
+      </needle_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>TEMPMOF_Label_1</name>
+      <text>CURRENT SLEW RATE</text>
+      <y>20</y>
+      <width>140</width>
+      <height>55</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="multi_state_led" version="2.0.0">
+      <name>LED (Multi State)</name>
+      <pv_name>PWRSPL:temp1</pv_name>
+      <x>700</x>
+      <y>60</y>
+      <width>50</width>
+      <height>50</height>
+      <states>
+        <state>
+          <value>0</value>
+          <label></label>
+          <color>
+            <color name="OK" red="0" green="255" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>10</value>
+          <label></label>
+          <color>
+            <color name="MINOR" red="255" green="128" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>2</value>
+          <label></label>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+      </states>
+      <fallback_label></fallback_label>
+    </widget>
+    <widget type="multi_state_led" version="2.0.0">
+      <name>LED (Multi State)_1</name>
+      <pv_name>PWRSPL:temp2</pv_name>
+      <x>700</x>
+      <y>165</y>
+      <width>50</width>
+      <height>50</height>
+      <states>
+        <state>
+          <value>0</value>
+          <label></label>
+          <color>
+            <color name="OK" red="0" green="255" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>1</value>
+          <label></label>
+          <color>
+            <color name="MINOR" red="255" green="128" blue="0">
+            </color>
+          </color>
+        </state>
+        <state>
+          <value>2</value>
+          <label></label>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+        </state>
+      </states>
+      <fallback_label></fallback_label>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_2</name>
+      <pv_name>PWRSPL:readslewrate</pv_name>
+      <x>110</x>
+      <y>20</y>
+      <width>200</width>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="MINOR" red="255" green="128" blue="0">
+        </color>
+      </foreground_color>
+      <precision>5</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>POWER_diagnostics</name>
+    <x>20</x>
+    <y>115</y>
+    <width>750</width>
+    <height>230</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="meter" version="3.0.0">
+      <name>CURRENT_meter</name>
+      <pv_name>PWRSPL:readI</pv_name>
+      <y>60</y>
+      <width>300</width>
+      <height>170</height>
+      <limits_from_pv>false</limits_from_pv>
+      <minimum>-10.0</minimum>
+      <maximum>10.0</maximum>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>CURRENTMONITOR_Label</name>
+      <text>CURRENT</text>
+      <y>20</y>
+      <width>300</width>
+      <height>40</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="meter" version="3.0.0">
+      <name>VOLTAGE_meter</name>
+      <pv_name>PWRSPL:readV</pv_name>
+      <x>443</x>
+      <y>60</y>
+      <width>300</width>
+      <height>170</height>
+      <limits_from_pv>false</limits_from_pv>
+      <minimum>-20.0</minimum>
+      <maximum>20.0</maximum>
+      <needle_color>
+        <color red="0" green="5" blue="255">
+        </color>
+      </needle_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>VOLTAGE_Label</name>
+      <text>VOLTAGE</text>
+      <x>443</x>
+      <y>20</y>
+      <width>300</width>
+      <height>40</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update</name>
+      <pv_name>PWRSPL:readI</pv_name>
+      <x>100</x>
+      <y>20</y>
+      <width>200</width>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="MAJOR" red="255" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <precision>5</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_1</name>
+      <pv_name>PWRSPL:readV</pv_name>
+      <x>543</x>
+      <y>20</y>
+      <width>200</width>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="0" green="0" blue="255">
+        </color>
+      </foreground_color>
+      <precision>5</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+  </widget>
+</display>

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-08-28 17:19:30 by hzb-->
+<display version="2.0.0">
+  <name>Main</name>
+  <widget type="rectangle" version="2.0.0">
+    <name>Background_righthalf</name>
+    <x>800</x>
+    <width>950</width>
+    <height>630</height>
+    <line_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Background_lefthalf</name>
+    <width>800</width>
+    <height>630</height>
+    <line_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Statleds</name>
+    <width>360</width>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>STATLED_background</name>
+      <width>360</width>
+      <height>200</height>
+      <line_color>
+        <color name="Header_Background" red="77" green="77" blue="77">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>POWSUPSTAT_Label</name>
+      <text>POWER SUPPLY STATUS</text>
+      <x>10</x>
+      <y>10</y>
+      <width>300</width>
+      <height>40</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>MOTORSTAT_label</name>
+      <text>STEPPER MOTOR STATUS</text>
+      <x>10</x>
+      <y>80</y>
+      <width>300</width>
+      <height>40</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>MAGNETSTAT_label</name>
+      <text>GAUSSMETER STATUS</text>
+      <x>10</x>
+      <y>150</y>
+      <width>300</width>
+      <height>40</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED</name>
+      <pv_name>GSMTR:getstatus</pv_name>
+      <bit>0</bit>
+      <x>300</x>
+      <y>150</y>
+      <width>40</width>
+      <height>40</height>
+      <off_color>
+        <color name="Text" red="0" green="0" blue="0">
+        </color>
+      </off_color>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_1</name>
+      <pv_name>PWRSPL:readreg</pv_name>
+      <bit>0</bit>
+      <x>300</x>
+      <y>10</y>
+      <width>40</width>
+      <height>40</height>
+      <off_color>
+        <color name="Text" red="0" green="0" blue="0">
+        </color>
+      </off_color>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>MOVING_led</name>
+      <pv_name>GR1:Ax1_Mtr</pv_name>
+      <bit>0</bit>
+      <x>300</x>
+      <y>80</y>
+      <width>40</width>
+      <height>40</height>
+      <off_color>
+        <color name="Text" red="0" green="0" blue="0">
+        </color>
+      </off_color>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Group</name>
+    <x>360</x>
+    <width>440</width>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>READ_background</name>
+      <width>440</width>
+      <height>200</height>
+      <line_color>
+        <color name="Header_Background" red="77" green="77" blue="77">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>POWSUPREAD_Label</name>
+      <text>POWER SUPPLY CURRENT</text>
+      <x>20</x>
+      <y>10</y>
+      <width>300</width>
+      <height>40</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>MOTORREAD_label</name>
+      <text>STEPPER MOTOR POSITION</text>
+      <x>20</x>
+      <y>80</y>
+      <width>300</width>
+      <height>40</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>MAGNETREAD_label</name>
+      <text>GAUSSMETER READOUT</text>
+      <x>20</x>
+      <y>150</y>
+      <width>300</width>
+      <height>40</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>PSUREAD_monitor</name>
+      <pv_name>PWRSPL:readI</pv_name>
+      <x>280</x>
+      <y>10</y>
+      <width>140</width>
+      <height>30</height>
+      <precision>5</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>MOTORREAD_monitor</name>
+      <pv_name>GR1:Ax1:readmm</pv_name>
+      <x>280</x>
+      <y>80</y>
+      <width>140</width>
+      <height>30</height>
+      <precision>2</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>MAGFIELD_monitor</name>
+      <pv_name>GSMTR:getmagfield</pv_name>
+      <x>280</x>
+      <y>150</y>
+      <width>140</width>
+      <height>30</height>
+      <precision>5</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Result_graph</name>
+    <y>200</y>
+    <width>800</width>
+    <height>400</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>graph_background</name>
+      <width>800</width>
+      <height>400</height>
+      <line_color>
+        <color name="Header_Background" red="77" green="77" blue="77">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>RESULTS</name>
+      <text>EXPERIMENT DATA</text>
+      <x>10</x>
+      <y>10</y>
+      <width>300</width>
+      <height>40</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="stripchart" version="2.1.0">
+      <name>Strip Chart</name>
+      <x>10</x>
+      <y>40</y>
+      <width>780</width>
+      <height>350</height>
+      <y_axes>
+        <y_axis>
+          <title></title>
+          <autoscale>false</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>-10.0</minimum>
+          <maximum>10.0</maximum>
+          <show_grid>false</show_grid>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+        <y_axis>
+          <title></title>
+          <autoscale>false</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>-500.0</minimum>
+          <maximum>500.0</maximum>
+          <show_grid>false</show_grid>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+        <y_axis>
+          <title></title>
+          <autoscale>false</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>20.0</maximum>
+          <show_grid>false</show_grid>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name>Current [A]</name>
+          <y_pv>PWRSPL:readI</y_pv>
+          <axis>0</axis>
+          <trace_type>2</trace_type>
+          <color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </color>
+          <line_width>2</line_width>
+          <point_type>0</point_type>
+          <point_size>10</point_size>
+          <visible>true</visible>
+        </trace>
+        <trace>
+          <name>Motor Pos [mm]</name>
+          <y_pv>GR1:Ax1:readmm</y_pv>
+          <axis>2</axis>
+          <trace_type>2</trace_type>
+          <color>
+            <color red="0" green="204" blue="0">
+            </color>
+          </color>
+          <line_width>2</line_width>
+          <point_type>0</point_type>
+          <point_size>10</point_size>
+          <visible>true</visible>
+        </trace>
+        <trace>
+          <name>Mag Field [G]</name>
+          <y_pv>GSMTR:getmagfield</y_pv>
+          <axis>1</axis>
+          <trace_type>2</trace_type>
+          <color>
+            <color red="0" green="0" blue="255">
+            </color>
+          </color>
+          <line_width>2</line_width>
+          <point_type>0</point_type>
+          <point_size>10</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+  </widget>
+  <widget type="navtabs" version="2.0.0">
+    <name>Navigation Tabs_1</name>
+    <tabs>
+      <tab>
+        <name>PWRSPL</name>
+        <file>magfield_PWRSPL.bob</file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>STPMTR</name>
+        <file>magfield_STPMTR.bob</file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>GSMTR</name>
+        <file>magfield_GSMTR.bob</file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+    </tabs>
+    <x>810</x>
+    <y>5</y>
+    <width>930</width>
+    <height>620</height>
+    <selected_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </selected_color>
+    <deselected_color>
+      <color name="Header_Background" red="77" green="77" blue="77">
+      </color>
+    </deselected_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_1</name>
+    <x>805</x>
+    <y>550</y>
+    <width>110</width>
+    <height>70</height>
+    <line_width>7</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="command">
+        <description>Open Notebook</description>
+        <command>firefox --new-window https://172.30.84.81</command>
+      </action>
+    </actions>
+    <x>810</x>
+    <y>555</y>
+    <height>60</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="Background" red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+</display>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-08-28 16:49:03 by hzb-->
+<display version="2.0.0">
+  <name>Gauss meter</name>
+  <widget type="group" version="3.0.0">
+    <name>background_elements</name>
+    <width>800</width>
+    <height>600</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>MAIN_background</name>
+      <width>800</width>
+      <height>600</height>
+      <line_color>
+        <color name="Header_Background" red="77" green="77" blue="77">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="rectangle" version="2.0.0">
+      <name>STATLED_background</name>
+      <x>10</x>
+      <y>150</y>
+      <width>360</width>
+      <height>120</height>
+      <line_color>
+        <color name="Header_Background" red="77" green="77" blue="77">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="rectangle" version="2.0.0">
+      <name>CURRENT_background</name>
+      <x>440</x>
+      <y>150</y>
+      <width>350</width>
+      <height>120</height>
+      <line_color>
+        <color name="Header_Background" red="77" green="77" blue="77">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="rectangle" version="2.0.0">
+      <name>MAGFIELD_background</name>
+      <x>440</x>
+      <y>20</y>
+      <width>350</width>
+      <height>120</height>
+      <line_color>
+        <color name="Header_Background" red="77" green="77" blue="77">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="rectangle" version="2.0.0">
+      <name>MAGPLOT_divider</name>
+      <y>280</y>
+      <width>800</width>
+      <height>40</height>
+      <line_color>
+        <color name="Header_Background" red="77" green="77" blue="77">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>MAIN_label</name>
+      <text>POWER:</text>
+      <x>20</x>
+      <y>20</y>
+      <width>210</width>
+      <height>40</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Diagnostics</name>
+      <x>17</x>
+      <y>28</y>
+      <width>760</width>
+      <height>240</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>VOLTAGEMONITOR_Label</name>
+        <text>SENSOR VOLTAGE</text>
+        <x>430</x>
+        <y>140</y>
+        <height>70</height>
+        <font>
+          <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+          </font>
+        </font>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>MAGNETMONITOR_Label</name>
+        <text>MAGNETIC FIELD STRENGTH</text>
+        <x>430</x>
+        <y>10</y>
+        <width>140</width>
+        <height>100</height>
+        <font>
+          <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+          </font>
+        </font>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>CURRENT_monitor</name>
+        <pv_name>GSMTR:getvolt</pv_name>
+        <x>580</x>
+        <y>130</y>
+        <width>180</width>
+        <height>100</height>
+        <precision>5</precision>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>MAGFIELD_monitor</name>
+        <pv_name>GSMTR:getmagfield</pv_name>
+        <x>580</x>
+        <width>180</width>
+        <height>100</height>
+        <precision>5</precision>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="led" version="2.0.0">
+        <name>POWSUP_led</name>
+        <x>300</x>
+        <y>130</y>
+        <width>30</width>
+        <height>30</height>
+        <off_color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </off_color>
+        <on_color>
+          <color name="STOP" red="255" green="0" blue="0">
+          </color>
+        </on_color>
+      </widget>
+      <widget type="led" version="2.0.0">
+        <name>STEPMOT_led</name>
+        <x>300</x>
+        <y>200</y>
+        <width>30</width>
+        <height>30</height>
+        <off_color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </off_color>
+        <on_color>
+          <color name="STOP" red="255" green="0" blue="0">
+          </color>
+        </on_color>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>POWSUP_Label</name>
+        <text>POWER SUPPLY CHANGING</text>
+        <y>130</y>
+        <width>300</width>
+        <height>40</height>
+        <font>
+          <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+          </font>
+        </font>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>MOTOR_label</name>
+        <text>STEPPER MOTOR MOVING</text>
+        <y>200</y>
+        <width>300</width>
+        <height>40</height>
+        <font>
+          <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+          </font>
+        </font>
+      </widget>
+      <widget type="bool_button" version="2.0.0">
+        <name>MAIN_Button</name>
+        <pv_name>GSMTR:turnon</pv_name>
+        <bit>-1</bit>
+        <x>23</x>
+        <y>32</y>
+        <width>140</width>
+        <height>60</height>
+        <off_label>On</off_label>
+        <foreground_color>
+          <color name="Background" red="255" green="255" blue="255">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </background_color>
+        <mode>1</mode>
+      </widget>
+      <widget type="bool_button" version="2.0.0">
+        <name>MAIN_Button_1</name>
+        <pv_name>GSMTR:turnoff</pv_name>
+        <x>213</x>
+        <y>32</y>
+        <width>140</width>
+        <height>60</height>
+        <foreground_color>
+          <color name="Background" red="255" green="255" blue="255">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </background_color>
+        <mode>1</mode>
+      </widget>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Data_plotting</name>
+    <x>20</x>
+    <y>290</y>
+    <width>760</width>
+    <height>300</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>MAGPLOT_Label</name>
+      <text>MAGNETIC FIELD OVER TIME</text>
+      <width>300</width>
+      <height>40</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="stripchart" version="2.1.0">
+      <name>Strip Chart</name>
+      <y>40</y>
+      <width>760</width>
+      <height>250</height>
+      <y_axes>
+        <y_axis>
+          <title>Y</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>-100.0</minimum>
+          <maximum>100.0</maximum>
+          <show_grid>false</show_grid>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name>$(traces[0].y_pv)</name>
+          <y_pv>GSMTR:getmagfield</y_pv>
+          <axis>0</axis>
+          <trace_type>2</trace_type>
+          <color>
+            <color red="0" green="0" blue="255">
+            </color>
+          </color>
+          <line_width>2</line_width>
+          <point_type>4</point_type>
+          <point_size>10</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+  </widget>
+</display>
